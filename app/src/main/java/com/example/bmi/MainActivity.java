@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             double bmi = w / ((h / 100.0) * (h / 100.0));
             showbmi.setText(String.valueOf(bmi));
 
-
+//2323
         }
     }
 }
