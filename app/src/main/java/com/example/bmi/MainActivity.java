@@ -29,9 +29,19 @@ public class MainActivity extends AppCompatActivity {
             double h = Double.parseDouble(height.getText().toString());
             double w = Double.parseDouble(weight.getText().toString());
             double bmi = w / ((h / 100.0) * (h / 100.0));
-            showbmi.setText(String.valueOf(bmi));
 
-//2323
+            String txt="";
+
+            if(bmi<18.5){
+                txt ="體重過輕";
+            }else if(bmi>25){
+                txt ="體重過重";
+            }else{
+                txt ="體重正常";
+            }
+            showbmi.setText(String.valueOf(bmi)+txt);
+
+
         }
     }
 }
