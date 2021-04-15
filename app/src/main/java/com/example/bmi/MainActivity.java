@@ -7,11 +7,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView showbmi;
     private EditText height;
     private EditText weight;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calBMI(View view) {
+
         if(height.getText().toString().isEmpty() || weight.getText().toString().isEmpty()){
             showbmi.setText("請輸入身高或體重的數值");
         }else {
@@ -39,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 txt ="體重正常";
             }
-            showbmi.setText(String.valueOf(bmi)+txt);
+            DecimalFormat decimalFormat =new DecimalFormat("#.##");
+           // showbmi.setText(String.valueOf(bmi)+txt);
+              showbmi.setText(decimalFormat.format(bmi)+txt);
 
 
         }
