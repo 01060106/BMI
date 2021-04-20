@@ -79,19 +79,20 @@
 
     <ImageView
         android:id="@+id/ivShow"
-        android:layout_width="264dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="107dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/images1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btSumit" />
+        app:layout_constraintTop_toBottomOf="@+id/btSumit"
+        app:layout_constraintVertical_bias="0.672" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
+        android:layout_width="409dp"
+        android:layout_height="99dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
