@@ -3,12 +3,14 @@ package com.example.bmi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.GenericArrayType;
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void showToast(View view) {
        String bmi= bmi_value();
-        Toast.makeText(this, bmi,Toast.LENGTH_LONG).show();
+        Toast toast=Toast.makeText(this, bmi,Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.TOP|Gravity.LEFT,0,0);
+                toast.show();
     }
 }
