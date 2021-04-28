@@ -2,6 +2,8 @@ package com.example.bmi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -72,5 +74,29 @@ public class MainActivity extends AppCompatActivity {
         Toast toast=Toast.makeText(this, bmi,Toast.LENGTH_LONG);
         toast.setGravity(Gravity.TOP|Gravity.LEFT,0,0);
                 toast.show();
+    }
+
+    public void show_alertdialog(View view) {
+        String[] a={"Red","Green","Blue"};
+
+        new AlertDialog.Builder(MainActivity.this)
+                .setTitle("你的BMI")
+                //.setMessage(bmi_value())
+                .setItems(a,null)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this, "ABC", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .setNeutralButton("ABC",null)
+                .setIcon(R.drawable.ic_launcher_background)
+                .show();
     }
 }
